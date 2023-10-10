@@ -25,7 +25,7 @@
     </div>
   </div>
   <div class="container mb-5">
-    <h2>作り方</h2>
+    <h2 id='aaa'>作り方</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
       <div class="col border p-2">
         <div class="mb-2"><span class="badge bg-secondary">1</span></div>
