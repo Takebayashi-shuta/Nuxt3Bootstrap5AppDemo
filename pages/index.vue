@@ -19,32 +19,7 @@
 
 
     <main>
-        <section>
-            <h2 src='#aaa'>セクションのタイトル</h2>
-            <p>ここにセクションのコンテンツを追加します。</p>
-        </section>
-
-
-
-
-        <section>
-            <h2>別のセクションのタイトル</h2>
-            <p>ここに別のセクションのコンテンツを追加します。</p>
-        </section>
-
-
-
-        <section>
-            <h1>サイトのロゴまたはタイトル</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">ホーム</a></li>
-                    <li><a href="#">サービス</a></li>
-                    <li><a href="#">ポートフォリオ</a></li>
-                    <li><a href="#">お問い合わせ</a></li>
-                </ul>
-            </nav>
-        </section>
+       <h1>aurhgarui</h1>
     </main>
 
 
