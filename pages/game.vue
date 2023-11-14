@@ -1,14 +1,13 @@
 <template>
-  <div class="container">
-    <div class="row"> 
-      <div class="col" v-for="item in state.messeges">{{ item }}</div>
-    </div>
-  </div>
-
+<div>
+  <canvas class= canvas>
+    <hr style="border: 2px solid;">
+  </canvas>
+</div>
 </template>
-<script setup>
- const state = useGameState()
- const init = useGameInit()
- init()
- 
-</script>
+
+<style>
+.canvas{
+  display:flex;
+}
+</style>

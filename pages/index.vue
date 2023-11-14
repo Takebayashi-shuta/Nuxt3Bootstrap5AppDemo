@@ -1,37 +1,34 @@
 <template>
-  
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phon Decoretion</title>
-    <meta name="description" content="title">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>"スマホデコレーション"</h1>
-    </header>
+  <div>
+    <p class="display-1">路地裏の戦い</p>
 
     <main>
-        <h2>機種を選択</h2>
-        
-        <ul>
-        <li>iphon14</li>
-        <li>iphon13</li>
-        <li>iphon12</li>
-        <li>iphon11</li>
-        <li>Android</li>
-        </ul>
-
-        
+      <div class="row">
+        <div class="col">
+          <div style="text-align: center">
+            <nuxt-link to="./grid" class="btn btn-danger">プレイ</nuxt-link>
+            <nuxt-link to="./game" class="btn btn-secondary">設定</nuxt-link>
+          </div>
+        </div>
+      </div>
     </main>
-
-    <footer>
-
-    </footer>
-</body>
-    
+  </div>
 </template>
+
+<style>
+  .body {
+    height: 100%;
+  }
+
+  .display-1 {
+    text-align: center;
+    padding: 200px;
+    font-weight: 700;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 150px;
+    margin: 10px;
+  }
+</style>
