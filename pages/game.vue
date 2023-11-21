@@ -1,13 +1,15 @@
 <template>
-<div>
-  <canvas class= canvas>
-    <hr style="border: 2px solid;">
-  </canvas>
-</div>
+  <div>
+    <GameCanvas />
+  </div>
 </template>
 
-<style>
-.canvas{
-  display:flex;
-}
-</style>
+<script>
+import GameCanvas from '/components/GameCanvas.vue';
+
+export default {
+  components: {
+    GameCanvas,
+  },
+};
+</script>

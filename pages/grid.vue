@@ -5,71 +5,35 @@
     </div>
 
     <div class= chose>
-      <div class="kyara onep" @drop="handleDrop" @dragover.prevent @dragenter.prevent></div>
-      <div class="kyara secp" @drop="handleDrop" @dragover.prevent @dragenter.prevent></div>
+      <div class="kyara onep"></div>
+      <div class="kyara secp"></div>
     </div>
 
-    <div class="chose">
-      <div class="btn square" @dragstart="handleDragStart" draggable="true">
-        <img width="100" height="100" src="./imgs/suika.jpg" alt="スイカ">
+    <div       class="chose">
+      <div class="btn square">
+        <img width="100" height="100" src="/suika.jpg" alt="スイカ">
       </div>
-      <div class="btn square" @dragstart="handleDragStart" draggable="true">
-        <img width="100" height="100" src="./imgs/jagaimo.jpg" alt="じゃがいも">
+      <div class="btn square">
+        <img width="100" height="100" src="/jagaimo.jpg" alt="じゃがいも">
       </div>
-      <div class="btn square" @dragstart="handleDragStart" draggable="true">
-        <img width="100" height="100" src="./imgs/banana.jpg" alt="バナナ">
+      <div class="btn square">
+        <img width="100" height="100" src="/banana.jpg" alt="バナナ">
       </div>
-      <div class="btn square" @dragstart="handleDragStart" draggable="true">
-        <img width="100" height="100" src="./imgs/piman.jpg" alt="ピーマン">
+      <div class="btn square">
+        <img width="100" height="100" src="/piman.jpg" alt="ピーマン">
       </div>
-      <div class="btn square" @dragstart="handleDragStart" draggable="true">
-        <img width="100" height="100" src="./imgs/onigiri.jpg" alt="おにぎり">
+      <div class="btn square">
+        <img width="100" height="100" src="/onigiri.jpg" alt="おにぎり">
       </div>
-      <div class="btn square" @dragstart="handleDragStart" draggable="true">
-        <img width="100" height="100" src="./imgs/ninniku.jpg" alt="にんにく">
+      <div class="btn square">
+        <img width="100" height="100" src="/ninniku.jpg" alt="にんにく">
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  methods: {
-    handleDrop(event) {
-      const file = event.dataTransfer.files[0];
 
-      if (file) {
-        if (file.type.startsWith('image/')) {
-          const imageUrl = URL.createObjectURL(file);
-          const targetClassList = event.target.classList;
-          const isOneP = targetClassList.contains('onep');
-          const isSecP = targetClassList.contains('secp');
-
-          if (isOneP || isSecP) {
-            this.drawImageOnCanvas(imageUrl, isOneP ? 'onep' : 'secp');
-          }
-        }
-      }
-    },
-
-    handleDragStart(event) {
-      event.dataTransfer.setData('text/plain', event.target.innerHTML);
-    },
-  },
-
-  drawImageOnCanvas(imageSrc, canvasRef) {
-    const canvas = this.$refs[canvasRef];
-    const context = canvas.getContext('2d');
-
-    const image = new Image();
-    image.src = imageSrc;
-
-    image.onload = () => {
-      context.clearRect(0, 0, canvas.width, canvas.height);
-      context.drawImage(image, 0, 0, canvas.width, canvas.height);
-    };
-  },
-};
 </script>
 
 <style scoped>
