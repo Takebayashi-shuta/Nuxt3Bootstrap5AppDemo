@@ -1,21 +1,20 @@
 <template>
-  <div>
-    <p class="display-1">路地裏の戦い</p>
-
-    <main>
-      <div class="row">
-        <div class="col">
-          <div style="text-align: center">
-            <nuxt-link to="./grid" class="btn btn-danger">プレイ</nuxt-link>
+  <main>
+    <div class="row">
+      <div class="col">
+        <div style="text-align: center">
+          <p class="display-1">路地裏の戦い</p>
+          <div>
+            <nuxt-link to="./charactor_chose" class="btn btn-danger">プレイ</nuxt-link>
             <nuxt-link to="./game" class="btn btn-secondary">設定</nuxt-link>
           </div>
         </div>
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
 </template>
 
-<style>
+<style scoped>
   .body {
     height: 100%;
   }
